@@ -104,7 +104,7 @@
         <!-- Header End -->
 
         <!-- Page Header Start -->
-        <div class="container-fluid page-header mb-5 p-0" style = "{{asset('assets/background-image: url(img/carousel-1.jpg);')}}">
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('assets/img/carousel-1.jpg')}});">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Contact</h1>
@@ -201,7 +201,7 @@
                         <!-- Kolom Map -->
                         <div class="col-md-8 wow fadeIn" data-wow-delay="0.1s">
                           <iframe class="position-relative rounded w-100 h-100"
-                            src="https://maps.app.goo.gl/GNbZFNSSyZAmrhUPA?g_st=aw"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5528.703229459831!2d110.38774950196574!3d-7.7875286908345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a59ed0c8938a1%3A0xb047846ec1455a5d!2sKos%20KITA%20Putra%20dan%20kos%20putri%20(Bukan%20Kos%20Campur)!5e0!3m2!1sid!2sid!4v1749975590022!5m2!1sid!2sid"
                             frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
                           </iframe>
                         </div>
