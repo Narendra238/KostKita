@@ -489,7 +489,7 @@
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>Kos paling nyaman yang pernah saya tempati. Bersih, aman, dan suasananya kekeluargaan banget.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-1.jpg" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('assets/img/testimonial-1.jpg')}}" style="width: 45px; height: 45px;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Client Name</h6>
                                 <small>Mahasiswa</small>
@@ -500,7 +500,7 @@
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>Sebagai pekerja kantoran, saya butuh tempat tinggal yang dekat dengan kantor dan nyaman untuk istirahat. Kost ini memenuhi semua kriteria itu.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-2.jpg" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('assets/img/testimonial-2.jpg')}}" style="width: 45px; height: 45px;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Client Name</h6>
                                 <small>Pekerja</small>
@@ -511,7 +511,7 @@
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>Saya sudah tinggal di kos ini selama hampir 2 tahun, dan sangat puas! Lingkungannya nyaman, bersih, dan tenang. Cocok banget buat mahasiswa yang butuh tempat tenang untuk belajar.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('assets/img/testimonial-3.jpg')}}" style="width: 45px; height: 45px;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Client Name</h6>
                                 <small>Mahasiswa</small>
@@ -522,7 +522,7 @@
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
                         <p>Tempat yang nyaman dan aman. Masyarakatnya juga ramah dan baik banget.</p>
                         <div class="d-flex align-items-center">
-                            <img class="img-fluid flex-shrink-0 rounded" src="img/testimonial-3.jpg" style="width: 45px; height: 45px;">
+                            <img class="img-fluid flex-shrink-0 rounded" src="{{asset('assets/img/testimonial-3.jpg')}}" style="width: 45px; height: 45px;">
                             <div class="ps-3">
                                 <h6 class="fw-bold mb-1">Client Name</h6>
                                 <small>Pekerja Kantoran</small>
