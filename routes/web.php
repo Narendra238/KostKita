@@ -38,16 +38,16 @@ Route::get('/bookingcowo3', function () {
     return view('bookingcowo3');
 });
 
-Route::get('/detailcowo1', function () {
-    return view('bookingcowo1');
-});
-
-// Route::get('/detailcowo2', function () {
-//     return view('bookingcowo2');
-// });
-
 Route::get('/detailcowo3', function () {
     return view('detailcowo3');
+});
+
+Route::get('/detailcowo1', function () {
+    return view('detailcowo1');
+});
+
+Route::get('/detailcowo2', function () {
+    return view('detailcowo2');
 });
 
 Route::get('/detailcewe1', function () {
@@ -60,4 +60,20 @@ Route::get('/detailcewe2', function () {
 
 Route::get('/detailcewe3', function () {
     return view('detailcewe3');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::get('/roomcewe', function () {
+    return view('roomcewe');
+});
+
+Route::get('/roomcowo', function () {
+    return view('roomcowo');
 });
