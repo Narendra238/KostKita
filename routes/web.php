@@ -92,4 +92,11 @@ Route::get('/dataPembayaran', function () {
 
 Route::get('/editPenghuni', function () {
     return view('editPenghuni');
+
+Route::get('/profileanak', function () {
+    return view('profileanak');
+});
+
+Route::get('/datakamaranak', function () {
+    return view('datakamaranak');
 });
