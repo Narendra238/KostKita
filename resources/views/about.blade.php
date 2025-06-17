@@ -46,7 +46,7 @@
         <div class="container-fluid bg-dark px-0">
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
-                    <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <a href="/dashboard" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                         <h1 class="m-0 text-primary">Kost KITA</h1>
                     </a>
                 </div>
@@ -73,7 +73,7 @@
                         </div>
                     </div> -->
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
-                        <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <a href="/dashboard" class="navbar-brand d-block d-lg-none">
                             <h1 class="m-0 text-primary">Kost KITA</h1>
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -81,7 +81,7 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
-                                <a href="index.html" class="nav-item nav-link active">Home</a>
+                                <a href="/dashboard" class="nav-item nav-link active">Home</a>
                                 <!-- <a href="about.html" class="nav-item nav-link">About Us</a> -->
                                 <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
                                 <!-- <a href="room.html" class="nav-item nav-link">Rooms</a> -->
@@ -93,8 +93,8 @@
                                         <!-- <a href="testimonial.html" class="dropdown-item">Testimonial</a> -->
                                     </div>
                                 </div>
-                                <a href="aboutreal.html" class="nav-item nav-link">About Us</a>
-                                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                                <a href="/about" class="nav-item nav-link">About Us</a>
+                                <a href="/contact" class="nav-item nav-link">Contact</a>
                             </div>
                         </div>
                     </nav>
@@ -361,8 +361,8 @@
                         <div class="row gy-5 g-4">
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                                <a class="btn btn-link" href="about.html">About Us</a>
-                                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                                <a class="btn btn-link" href="/about">About Us</a>
+                                <a class="btn btn-link" href="/contact">Contact Us</a>
                                 <a class="btn btn-link" href="">Privacy Policy</a>
                                 <a class="btn btn-link" href="">Terms & Condition</a>
                                 <a class="btn btn-link" href="">Support</a>
@@ -383,7 +383,7 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Kost KITA</a>, All Right Reserved, 2025 
+                            &copy; <a class="border-bottom" href="/dashboard">Kost KITA</a>, All Right Reserved, 2025 
                             
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Designed By <a class="border-bottom" href="https://htmlcodex.com">Ultra Tech Company</a>
@@ -391,7 +391,7 @@
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="index.html">Home</a>
+                                <a href="/dashboard">Home</a>
                                 <a href="">Cookies</a>
                                 <a href="">Help</a>
                                 <a href="">FQAs</a>
