@@ -77,3 +77,11 @@ Route::get('/roomcewe', function () {
 Route::get('/roomcowo', function () {
     return view('roomcowo');
 });
+
+Route::get('/profileanak', function () {
+    return view('profileanak');
+});
+
+Route::get('/datakamaranak', function () {
+    return view('datakamaranak');
+});
