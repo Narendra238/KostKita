@@ -105,20 +105,20 @@
 
 
         <!-- Page Header Start -->
-        <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('assets/img/about.jpg')}});">
+<!--         <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Contact</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
                             <li class="breadcrumb-item"><a href="#">Home</a></li>
                             <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
                         </ol>
                     </nav>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Page Header End -->
 
 
@@ -168,144 +168,104 @@
         <!-- Booking End -->
 
 
-        <!-- About Start -->
+        <!-- Contact Start -->
         <div class="container-xxl py-5">
             <div class="container">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-6">
-                        <h6 class="section-title text-start text-primary text-uppercase">About Us</h6>
-                        <h1 class="mb-4">Welcome to <span class="text-primary">Kost KITA</span></h1>
-                        <p class="mb-4">Kost KITA adalah tempat kost terpercaya yang berdedikasi untuk membantu Anda menemukan hunian nyaman untuk menyediakan layanan yang memuaskan dan personal kepada setiap penghuni.</p>
-                        <p>Kost KITA menjadi salah satu kost-kost an tepercaya dalam mewujudkan hunian kost yang nyaman dan berkualitas. Kami memfasilitasi pencarian kost dengan fasilitas lengkap, lingkungan aman, dan proses yang transparan serta mudah.</p>
-                        <div class="row g-3 pb-4">
-                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.1s">
-                                <div class="border rounded p-1">
-                                    <div class="border rounded text-center p-4">
-                                        <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">22</h2>
-                                        <p class="mb-0">Rooms</p>
-                                    </div>
-                                </div>
+                <!-- <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Contact Us</h6>
+                    <h1 class="mb-5"><span class="text-primary text-uppercase">Contact</span> For Any Query</h1>
+                </div> -->
+                <div class="row g-4">
+<!--                     <div class="col-md-4 p-4 p-md-5 bg-white">
+                    <h2 class="font-weight-bold mb-4">Lets get started</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+                    <p><a href="#" class="btn btn-primary">Book Apartment Now</a></p>
+                </div> -->
+                    <div class="col-12">
+                        <div class="row gy-4">
+<!--                             <div class="col-md-4">
+                                <h6 class="section-title text-start text-primary text-uppercase">Booking</h6>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i>book@example.com</p>
                             </div>
-                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">
-                                <div class="border rounded p-1">
-                                    <div class="border rounded text-center p-4">
-                                        <i class="fa fa-users-cog fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">2</h2>
-                                        <p class="mb-0">Staffs</p>
-                                    </div>
-                                </div>
+                            <div class="col-md-4">
+                                <h6 class="section-title text-start text-primary text-uppercase">General</h6>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</p>
                             </div>
-                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
-                                <div class="border rounded p-1">
-                                    <div class="border rounded text-center p-4">
-                                        <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">21</h2>
-                                        <p class="mb-0">Clients</p>
-                                    </div>
-                                </div>
+                            <div class="col-md-4">
+                                <h6 class="section-title text-start text-primary text-uppercase">Technical</h6>
+                                <p><i class="fa fa-envelope-open text-primary me-2"></i>tech@example.com</p>
                             </div>
-                        </div>
-                        <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a> -->
+                        </div> -->
                     </div>
-                    <div class="col-lg-6">
-                        <div class="row g-3">
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="{{asset('assets/img/about1.jpg')}}" style="margin-top: 25%;">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="{{asset('assets/img/about2.jpg')}}">
-                            </div>
-                            <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="{{asset('assets/img/about3.jpg')}}">
-                            </div>
-                            <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="{{asset('assets/img/about4.jpg')}}">
-                            </div>
+                    <div class="container">
+                    <div class="row">
+                        <!-- Kolom Map -->
+                        <!-- <div class="col-md-8 wow fadeIn" data-wow-delay="0.1s">
+                          <iframe class="position-relative rounded w-100 h-100"
+                            src="https://maps.app.goo.gl/jW2gEHQUksBJyuor7?g_st=aw"
+                            frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                          </iframe>
+                        </div> -->
+
+                        <!-- Kolom Teks -->
+                        <!-- <div class="col-md-4 bg-white pt-3">
+                          <h2 class="font-weight-bold mb-2">Ayo Mulai!</h2>
+                          <p>Arahin alamatnya kemana mana</p>
+                        </div> -->
+                      </div>
+                    </div>
+                    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+                    <div class="col-md-6">
+                        <div class="wow fadeInUp" data-wow-delay="0.2s">
+                            <form>
+                                <div class="row g-2">
+                                    <div class="contact-warp w-100 p-md-5 p-4">
+                                        <h1 class="mb-4 text-center">Login</h1>
+                                    </div>
+                                    <!-- <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                            <label for="name">Username/Alamat Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                            <label for="email">Password</label>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Masukkan Nama Lengkap">
+                                            <label for="name">Username/Alamat Email</label>
+                                        </div>
+                                    </div><br>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="password" class="form-control" id="password" placeholder="Masukkan password">
+                                            <label for="password">Password</label>
+                                        </div><br><br>
+                                    </div>
+                                    <!-- <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
+                                            <label for="message">Pesan</label>
+                                        </div>
+                                    </div> -->
+                                    <div class="text-center">
+                                        <!-- <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button> -->
+                                        <a href="index.html" class="btn btn-primary py-3 px-5 mt-2">Login</a>
+                                        <!-- <button class="btn btn-primary py-3 px-5 mt-2" type="submit">Login</button><br> -->
+                                    </div>
+                                </div>
+                            </form>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- About End -->
-
-
-        <!-- Team Start -->
-<!--         <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Our Team</h6>
-                    <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Staffs</span></h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-2.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-3.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/team-4.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Full Name</h5>
-                                <small>Designation</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Team End -->
+        <!-- Contact End -->
 
 
         <!-- Newsletter Start -->
@@ -328,6 +288,8 @@
         
 
         <!-- Footer Start -->
+        <!-- <div class="container-fluid bg-white py-5"> -->
+        <br><br><br><br><br>    
         <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
             <div class="container pb-5">
                 <div class="row g-5">
@@ -361,8 +323,8 @@
                         <div class="row gy-5 g-4">
                             <div class="col-md-6">
                                 <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                                <a class="btn btn-link" href="about.html">About Us</a>
-                                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                                <a class="btn btn-link" href="">About Us</a>
+                                <a class="btn btn-link" href="">Contact Us</a>
                                 <a class="btn btn-link" href="">Privacy Policy</a>
                                 <a class="btn btn-link" href="">Terms & Condition</a>
                                 <a class="btn btn-link" href="">Support</a>
@@ -391,7 +353,7 @@
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="index.html">Home</a>
+                                <a href="">Home</a>
                                 <a href="">Cookies</a>
                                 <a href="">Help</a>
                                 <a href="">FQAs</a>
