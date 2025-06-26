@@ -77,3 +77,31 @@ Route::get('/roomcewe', function () {
 Route::get('/roomcowo', function () {
     return view('roomcowo');
 });
+
+Route::get('/tambahpenghuni', function () {
+    return view('tambahpenghuni');
+});
+
+Route::get('/dataPenghuni', function () {
+    return view('dataPenghuni');
+});
+
+Route::get('/dataPembayaran', function () {
+    return view('dataPembayaran');
+});
+
+Route::get('/editPenghuni', function () {
+    return view('editPenghuni');
+});
+
+Route::get('/profileanak', function () {
+    return view('profileanak');
+});
+
+Route::get('/datakamaranak', function () {
+    return view('datakamaranak');
+});
+
+Route::get('/dashboardadmin', function () {
+    return view('dashboardadmin');
+});
