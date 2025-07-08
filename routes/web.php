@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileUsersKostController;
+use App\Http\Controllers\LoginController;
 
 Route::get('/', function () {
     return view('dashboard');
@@ -94,9 +96,9 @@ Route::get('/editPenghuni', function () {
     return view('editPenghuni');
 });
 
-Route::get('/profileanak', function () {
-    return view('profileanak');
-});
+// Route::get('/profileanak', function () {
+//     return view('profileanak');
+// });
 
 Route::get('/datakamaranak', function () {
     return view('datakamaranak');
@@ -105,3 +107,9 @@ Route::get('/datakamaranak', function () {
 Route::get('/dashboardadmin', function () {
     return view('dashboardadmin');
 });
+
+
+Route::get('/profilanak', [ProfileUsersKostController::class, 'index']);
+Route::get('/profilanak/{id}', [ProfileUsersKostController::class, 'show']);
+
+Route::post('/login-gabungan', [LoginController::class, 'loginGabungan']);
