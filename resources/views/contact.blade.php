@@ -51,27 +51,6 @@
                     </a>
                 </div>
                 <div class="col-lg-9">
-                    <!-- <div class="row gx-0 bg-white d-none d-lg-flex">
-                        <div class="col-lg-7 px-5 text-start">
-                            <div class="h-100 d-inline-flex align-items-center py-2 me-4">
-                                <i class="fa fa-envelope text-primary me-2"></i>
-                                <p class="mb-0">info@example.com</p>
-                            </div>
-                            <div class="h-100 d-inline-flex align-items-center py-2">
-                                <i class="fa fa-phone-alt text-primary me-2"></i>
-                                <p class="mb-0">+012 345 6789</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 px-5 text-end">
-                            <div class="d-inline-flex align-items-center py-2">
-                                <a class="me-3" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="me-3" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="me-3" href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a class="me-3" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="" href=""><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div> -->
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
                         <a href="/" class="navbar-brand d-block d-lg-none">
                             <h1 class="m-0 text-primary">Kost KITA</h1>
@@ -82,19 +61,16 @@
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <div class="navbar-nav mr-auto py-0">
                                 <a href="/" class="nav-item nav-link active">Home</a>
-                                <!-- <a href="about.html" class="nav-item nav-link">About Us</a> -->
-                                <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
-                                <!-- <a href="room.html" class="nav-item nav-link">Rooms</a> -->
                                 <div class="nav-item dropdown">
                                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Room</a>
                                     <div class="dropdown-menu rounded-0 m-0">
                                         <a href="/roomcewe" class="dropdown-item">Perempuan</a>
                                         <a href="/roomcowo" class="dropdown-item">Laki - laki</a>
-                                        <!-- <a href="testimonial.html" class="dropdown-item">Testimonial</a> -->
                                     </div>
                                 </div>
                                 <a href="/about" class="nav-item nav-link">About Us</a>
                                 <a href="/contact" class="nav-item nav-link">Contact</a>
+                                <a href="/login" class="nav-item nav-link">Login</a>
                             </div>
                         </div>
                     </nav>
@@ -104,14 +80,13 @@
         <!-- Header End -->
 
         <!-- Page Header Start -->
-        <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('assets/img/carousel-1.jpg')}});">
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url({{asset('assets/img/ContactAset.png')}});">
             <div class="container-fluid page-header-inner py-5">
                 <div class="container text-center pb-5">
                     <h1 class="display-3 text-white mb-3 animated slideInDown">Contact</h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
                             <li class="breadcrumb-item text-white active" aria-current="page">Contact</li>
                         </ol>
                     </nav>
@@ -120,81 +95,16 @@
         </div>
         <!-- Page Header End -->
 
-
-        <!-- Booking Start -->
-<!--         <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="bg-white shadow" style="padding: 35px;">
-                    <div class="row g-2">
-                        <div class="col-md-10">
-                            <div class="row g-2">
-                                <div class="col-md-3">
-                                    <div class="date" id="date1" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input"
-                                            placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="date" id="date2" data-target-input="nearest">
-                                        <input type="text" class="form-control datetimepicker-input" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker"/>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Adult</option>
-                                        <option value="1">Adult 1</option>
-                                        <option value="2">Adult 2</option>
-                                        <option value="3">Adult 3</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-3">
-                                    <select class="form-select">
-                                        <option selected>Child</option>
-                                        <option value="1">Child 1</option>
-                                        <option value="2">Child 2</option>
-                                        <option value="3">Child 3</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2">
-                            <button class="btn btn-primary w-100">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Booking End -->
-
-
         <!-- Contact Start -->
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
-                    <h6 class="section-title text-center text-primary text-uppercase">Contact Us</h6>
-                    <h1 class="mb-5"><span class="text-primary text-uppercase">Contact</span> For Any Query</h1>
+                    <h6 class="section-title text-center text-primary text-uppercase">Hubungi Kami</h6>
+                    <h1 class="mb-5"><span class="text-primary text-uppercase">Hubungi</span> Disini !</h1>
                 </div>
                 <div class="row g-4">
-<!--                     <div class="col-md-4 p-4 p-md-5 bg-white">
-                    <h2 class="font-weight-bold mb-4">Lets get started</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                    <p><a href="#" class="btn btn-primary">Book Apartment Now</a></p>
-                </div> -->
                     <div class="col-12">
                         <div class="row gy-4">
-<!--                             <div class="col-md-4">
-                                <h6 class="section-title text-start text-primary text-uppercase">Booking</h6>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>book@example.com</p>
-                            </div>
-                            <div class="col-md-4">
-                                <h6 class="section-title text-start text-primary text-uppercase">General</h6>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</p>
-                            </div>
-                            <div class="col-md-4">
-                                <h6 class="section-title text-start text-primary text-uppercase">Technical</h6>
-                                <p><i class="fa fa-envelope-open text-primary me-2"></i>tech@example.com</p>
-                            </div>
-                        </div> -->
                     </div>
                     <div class="container">
                     <div class="row">
@@ -215,41 +125,14 @@
                     </div>
                     <div class="col-md-6">
                         <div class="wow fadeInUp" data-wow-delay="0.2s">
-                            <form>
                                 <div class="row g-2">
                                     <div class="contact-warp w-100 p-md-5 p-4">
                                         <h3 class="mb-4">Kirim Pesan Yuk!</h3>
+                                        <h4>Kenalan lebih dekat dengan hubungi kami pada kontak WhatsApp dibawah ini :</h4>
+                                        <a href="https://wa.me/62895417305050" target = _blank><i class="fab fa-whatsapp"></i> +62 8954 1730 5050</a>
                                     </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                            <label for="name">Nama Lengkap</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-floating">
-                                            <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                            <label for="email">Alamat Email</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                            <label for="subject">Subjek</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 150px"></textarea>
-                                            <label for="message">Pesan</label>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <!-- <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button> -->
-                                        <button class="btn btn-primary py-3 px-5 mt-2" type="submit">Send Message</button><br>
-                                    </div>
+                                    
                                 </div>
-                            </form>
                         </div>
                     </div>
                 </div>
@@ -259,19 +142,14 @@
         <!-- Contact End -->
         
 
-        <!-- Footer Start -->    
+        <!-- Footer Start -->
         <div class="container-fluid bg-dark text-light footer wow fadeIn" data-wow-delay="0.1s">
             <div class="container pb-5">
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-4">
                         <div class="bg-primary rounded p-4">
-                            <a href="/dashboard"><h1 class="text-white mb-3">Kost KITA</h1></a>
-                            <!-- <p class="text-white mb-0">
-                                Download <a class="text-dark fw-medium" href="https://htmlcodex.com/hotel-html-template-pro">Hotelier – Premium Version</a>, build a professional website for your hotel business and grab the attention of new visitors upon your site’s launch.
-                            </p> -->
-                            <!-- <p>Solusi Hunian Nyaman dan Praktis</p>
-                            <p>Proses sewa mudah, tanpa ribet. <br>Lingkungan bersih dan aman. <br>Tanpa drama, langsung tinggal.</p>
-                            <p>Kost rasa rumah sendiri? kostKITA aja!</p> -->
+                            <a href="/"><h1 class="text-white mb-3">Kost KITA</h1></a>
+                           
                         </div><br><br>
                             <p>Solusi Hunian Nyaman dan Praktis</p>
                             <p>Proses sewa mudah, tanpa ribet. <br>Lingkungan bersih dan aman. <br>Tanpa drama, langsung tinggal.</p>
@@ -280,34 +158,8 @@
                     <div class="col-md-6 col-lg-3">
                         <h6 class="section-title text-start text-primary text-uppercase mb-4">Contact</h6>
                         <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>RT 18 RW 6, Desa Demangan, Kecamatan Godokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta</p>
-                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+62 858 0192 5580</p>
+                        <p class="mb-2"><i class="fa fa-phone-alt me-3"></i><a href="https://wa.me/62895417305050" target = _blank>+62 895-4173-05050</a></p>
                         <p class="mb-2"><i class="fa fa-envelope me-3"></i>kostKITA@gmail.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                            <!-- <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a> -->
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-12">
-                        <div class="row gy-5 g-4">
-                            <div class="col-md-6">
-                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Company</h6>
-                                <a class="btn btn-link" href="/about">About Us</a>
-                                <a class="btn btn-link" href="/contact">Contact Us</a>
-                                <a class="btn btn-link" href="">Privacy Policy</a>
-                                <a class="btn btn-link" href="">Terms & Condition</a>
-                                <a class="btn btn-link" href="">Support</a>
-                            </div>
-                            <!-- <div class="col-md-6">
-                                <h6 class="section-title text-start text-primary text-uppercase mb-4">Services</h6>
-                                <a class="btn btn-link" href="">Food & Restaurant</a>
-                                <a class="btn btn-link" href="">Spa & Fitness</a>
-                                <a class="btn btn-link" href="">Sports & Gaming</a>
-                                <a class="btn btn-link" href="">Event & Party</a>
-                                <a class="btn btn-link" href="">GYM & Yoga</a>
-                            </div> -->
-                        </div>
                     </div>
                 </div>
             </div>
@@ -315,18 +167,15 @@
                 <div class="copyright">
                     <div class="row">
                         <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="/dashboard">Kost KITA</a>, All Right Reserved, 2025 
-                            
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a class="border-bottom" href="https://htmlcodex.com">Ultra Tech Company</a>
-                            <br>Distributed By: <a class="border-bottom" href="https://themewagon.com" target="_blank">Ultra Tech Comp.</a>
+                            &copy; <a class="border-bottom" href="#">Kost KITA</a>, All Right Reserved, 2025 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="#">Ultra Tech Company</a>
+                            <br>Distributed By: <a class="border-bottom" href="#">Ultra Tech Comp.</a>
                         </div>
                         <div class="col-md-6 text-center text-md-end">
                             <div class="footer-menu">
-                                <a href="/dashboard">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
+                                <a href="/">Home</a>
                             </div>
                         </div>
                     </div>
