@@ -180,7 +180,7 @@
         <!-- About End -->
 
         <!-- Testimonial Start -->
-        <div class="container-xxl testimonial my-5 py-5 bg-dark wow zoomIn" data-wow-delay="0.1s">
+        <div style="background-image: url('{{ asset('assets/img/ContactAset.png') }}'); background-size: cover; background-position: center;" data-wow-delay="0.1s">
             <div class="container">
                 <div class="owl-carousel testimonial-carousel py-5">
                     <div class="testimonial-item position-relative bg-white rounded overflow-hidden">
