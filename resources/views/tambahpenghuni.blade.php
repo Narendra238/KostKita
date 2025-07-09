@@ -65,22 +65,6 @@
                 </div>
             </div>
         </div>
-        <!-- Header End -->
-
-
-        <!-- Page Header Start -->
-        <!-- <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);"> -->
-            <!-- <div class="container-fluid page-header-inner py-5"> -->
-                <!-- <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Woman Rooms</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page"> Woman Rooms 2</li>
-                        </ol>
-                    </nav>
-                </div> -->
             </div>
         </div>
         <!-- Page Header End -->
@@ -89,6 +73,10 @@
 <div class="container mt-4">
   <h4 class="fw-bold mb-3">Tambah Data Penghuni</h4>
   <form>
+    <div class="mb-3">
+      <label class="form-label">NIK</label>
+      <input type="text" class="form-control" placeholder="Masukkan NIK">
+    </div>
     <div class="mb-3">
       <label class="form-label">Nama Lengkap</label>
       <input type="text" class="form-control" placeholder="Masukkan nama lengkap">
@@ -106,24 +94,34 @@
     </div>
 
     <div class="mb-3">
-      <label class="form-label">Alamat</label>
-      <input type="text" class="form-control" placeholder="Alamat lengkap">
+      <label class="form-label">Nomor Telpon</label>
+      <input type="text" class="form-control" placeholder="Masukkan Nomor Telpon">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Asal Daerah</label>
+      <input type="text" class="form-control" placeholder="Asal Daerah">
     </div>
 
     <div class="row mb-3">
       <div class="col-md-6">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-control" placeholder="email@example.com">
+        <label class="form-label">Nama Ortu</label>
+        <input type="email" class="form-control" placeholder="Nama Ortu">
       </div>
       <div class="col-md-6">
-        <label class="form-label">No. HP</label>
+        <label class="form-label">No. HP Ortu</label>
         <input type="tel" class="form-control" placeholder="08xxxxxx">
       </div>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Nomor Kamar</label>
-      <input type="text" class="form-control" placeholder="Contoh: Kamar No.1">
+      <input type="text" class="form-control" placeholder="Contoh: R002">
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Tanggal Masuk</label>
+      <input type="text" class="form-control" placeholder="Tanggal Masuk">
     </div>
 
     <button type="submit" class="btn btn-warning">Tambah</button>

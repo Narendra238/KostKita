@@ -101,6 +101,33 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="container pb-5">
+                                <div class="row justify-content-center g-4">
+                                    <!-- Anak Kost -->
+                                    <div class="col-md-4">
+                                        <a href="{{ url('/dataPenghuni') }}" style="text-decoration:none;">
+                                            <div class="room-box shadow" style="cursor:pointer;">
+                                                <i class="fas fa-bed"></i>
+                                                <h5>Anak Kost</h5>
+                                                <h3 class="fw-bold mb-0"></h3>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <a href="{{ url('/dataPembayaran') }}" style="text-decoration:none;">
+                                            <div class="room-box shadow" style="cursor:pointer;">
+                                                <i class="fas fa-bed"></i>
+                                                <h5>Data Pembayaran</h5>
+                                                <h3 class="fw-bold mb-0"></h3>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
                             <!-- Room Summary End -->
                         </div>
                     </div>

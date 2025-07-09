@@ -33,7 +33,7 @@ class LoginController extends Controller
                 session(['anak_id' => $anak->id]);
                 return redirect('/profilanak/' . $anak->id);
             } else {
-                return back()->with('error', 'ID tidak ditemukan');
+                return back()->with('error', 'Username atau password admin salah');
             }
         }
     }
