@@ -21,8 +21,9 @@
     <div class="container mt-4">
       <!-- Header -->
       <div class="d-flex justify-content-between align-items-center mb-3">
-        <h3 class="fw-bold">Data Kamar</h3>
-        <div>
+        <h3 class="fw-bold mb-0">Data Kamar</h3>
+        <div class="ms-auto">
+          <a href="/dashboardadmin" class="btn btn-custom px-4 py-2"><strong>Dashboard Admin</strong></a>
         </div>
       </div>
 
@@ -31,42 +32,32 @@
         <div class="card-body">
           <h5 class="text-center fw-bold mb-4">TABEL DATA KAMAR</h5>
           <div class="table-responsive">
-            <table class="table table-bordered text-center align-middle">
-              <thead class="table-light">
+            <table class="table table-striped">
+              <thead>
                 <tr>
-                  <th>No</th>
-                  <th>Jenis Kamar</th>
-                  <th>Harga</th>
-                  <th>Perempuan/Laki-Laki</th>
-                  <th>Status Kamar</th>
-                  <th>Aksi</th>
+                  <th scope="col">ID Kamar</th>
+                  <th scope="col">Nama Kamar</th>
+                  <th scope="col">Jenis Kamar</th>
+                  <th scope="col">Harga</th>
+                  <th scope="col">Status</th>
                 </tr>
               </thead>
               <tbody>
+                @foreach($kamars as $kamar)
                 <tr>
-                  <td>1</td>
-                  <td>Besar</td>
-                  <td>Rp.600.000</td>
-                  <td>Perempuan</td>
-                  <td>Terisi</td>
-                  <td><button class="btn btn-custom">Edit</button></td>
+                  <td>{{ $kamar->id_kmr }}</td>
+                  <td>{{ $kamar->jenis_kamar }}</td>
+                  <td>{{ $kamar->dimensi }}</td>
+                  <td>Rp. {{ number_format($kamar->harga, 0, ',', '.') }}</td>
+                  <td>
+                    @if($kamar->profileUsersKost->count() > 0)
+                      <span class="badge bg-success">Terisi</span>
+                    @else
+                      <span class="badge bg-secondary">Kosong</span>
+                    @endif
+                  </td>
                 </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Sedang</td>
-                  <td>Rp.500.000</td>
-                  <td>Perempuan</td>
-                  <td>Kosong</td>
-                  <td><button class="btn btn-custom">Edit</button></td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Kecil</td>
-                  <td>Rp.250.000</td>
-                  <td>Perempuan</td>
-                  <td>Terisi</td>
-                  <td><button class="btn btn-custom">Edit</button></td>s
-                </tr>
+                @endforeach
               </tbody>
             </table>
           </div>

@@ -61,7 +61,7 @@
         <div class="container-fluid bg-dark px-0">
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
-                    <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <a href="/" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                         <h1 class="m-0 text-primary">Kost KITA</h1>
                     </a>
                 </div>
@@ -82,28 +82,6 @@
                             <!-- Room Summary Start -->
                             <div class="container pb-5">
                                 <div class="row justify-content-center g-4">
-                                    <!-- Kamar Cowo -->
-                                    <div class="col-md-4">
-                                        <div class="room-box shadow">
-                                            <i class="fas fa-bed"></i>
-                                            <h5>Kamar Cowo</h5>
-                                            <h3 class="fw-bold mb-0">0/14</h3>
-                                        </div>
-                                    </div>
-
-                                    <!-- Kamar Cewe -->
-                                    <div class="col-md-4">
-                                        <div class="room-box shadow">
-                                            <i class="fas fa-procedures"></i>
-                                            <h5>Kamar Cewe</h5>
-                                            <h3 class="fw-bold mb-0">0/8</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="container pb-5">
-                                <div class="row justify-content-center g-4">
                                     <!-- Anak Kost -->
                                     <div class="col-md-4">
                                         <a href="{{ url('/dataPenghuni') }}" style="text-decoration:none;">
@@ -121,6 +99,16 @@
                                                 <i class="fas fa-bed"></i>
                                                 <h5>Data Pembayaran</h5>
                                                 <h3 class="fw-bold mb-0"></h3>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <a href="{{ url('/datakamaranak') }}" style="text-decoration:none;">
+                                            <div class="room-box shadow" style="cursor:pointer;">
+                                                <i class="fas fa-bed"></i>
+                                                <h5>Data Kamar</h5>
+                                                <h6 class="mb-1">Kosong Kamar Cewe: <span class="fw-bold">{{ $ceweKosong ?? 0 }}</span></h6>
+                                                <h6 class="mb-1">Kosong Kamar Cowo: <span class="fw-bold">{{ $cowoKosong ?? 0 }}</span></h6>
                                             </div>
                                         </a>
                                     </div>

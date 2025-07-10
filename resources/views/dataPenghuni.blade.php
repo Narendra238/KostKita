@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>Kost - KostKITA</title>
@@ -46,7 +45,7 @@
                 <div class="container-fluid bg-dark px-0">
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
-                    <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <a href="#" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                         <h1 class="m-0 text-primary">Kost KITA</h1>
                     </a>
                 </div>
@@ -59,7 +58,7 @@
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
+                           
                         </div>
                     </nav>
                 </div>
@@ -67,20 +66,6 @@
         </div>
         <!-- Header End -->
 
-
-        <!-- Page Header Start -->
-        <!-- <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);"> -->
-            <!-- <div class="container-fluid page-header-inner py-5"> -->
-                <!-- <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Woman Rooms</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page"> Woman Rooms 2</li>
-                        </ol>
-                    </nav>
-                </div> -->
             </div>
         </div>
         <!-- Page Header End -->
@@ -89,9 +74,11 @@
       <!-- Header -->
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h3 class="fw-bold">Data Penghuni</h3>
+        <div class="ms-auto">
+          <a href="/dashboardadmin" class="btn btn-custom px-4 py-2"><strong>Dashboard Admin</strong></a>
+        </div>
         <div>
-          <button class="btn btn-custom me-2">Tambah</button>
-          <button class="btn btn-custom">Edit</button>
+          <a href="/tambahpenghuni" class="btn btn-custom me-2"><strong>Tambah</strong></a>
         </div>
       </div>
 
@@ -100,54 +87,49 @@
         <div class="card-body">
           <h5 class="text-center fw-bold mb-4">TABEL DATA PENGHUNI</h5>
           <div class="table-responsive">
-            <table class="table table-bordered text-center align-middle">
+            <table class="table table-bordered text-center align-middle table-sm small">
               <thead class="table-light">
                 <tr>
                   <th>ID</th>
                   <th>Nama Lengkap</th>
                   <th>Nama Orang Tua</th>
                   <th>Asal</th>
-                  <th>No. Telepon</th>
-                  <th>No. Ortu</th>
-                  <th>Jenis Kelamin</th>
+                  <th>No.Telepon</th>
+                  <th>No.Ortu</th>
+                  <th>JK</th>
                   <th>Tanggal Masuk</th>
                   <th>Durasi</th>
+                  <th>Tanggal Selesai</th>
+                  <th>ID Kamar</th>
+                  <th>Tindakan</th>
                 </tr>
               </thead>
               <tbody>
+                @foreach($penghuni as $item)
                 <tr>
-                  <td>001</td>
-                  <td>Andi Wijaya</td>
-                  <td>Budi Wijaya</td>
-                  <td>Bandung</td>
-                  <td>081234567890</td>
-                  <td>081987654321</td>
-                  <td>Laki-laki</td>
-                  <td>2025-01-10</td>
-                  <td>6 Bulan</td>
+                  <td>{{ $item->id }}</td>
+                  <td>{{ $item->namalengkap }}</td>
+                  <td>{{ $item->namaortu }}</td>
+                  <td>{{ $item->asal }}</td>
+                  <td>{{ $item->no_tlp }}</td>
+                  <td>{{ $item->no_ortu }}</td>
+                  <td>{{ $item->jenis_kelamin }}</td>
+                  <td>{{ $item->tgl_masuk }}</td>
+                  <td>{{ $item->durasi_kost }}</td>
+                  <td class="fw-bold">
+                      {{ \Carbon\Carbon::parse($item->tgl_masuk)->addDays($item->durasi_kost)->format('Y-m-d') }}
+                  </td>
+                  <td>{{ $item->id_kmr }}</td>
+                  <td>
+                    <a href="/editPenghuni/{{ $item->id }}" class="btn btn-sm btn-warning">Edit</a>
+                    <form action="/hapusPenghuni/{{ $item->id }}" method="POST" style="display:inline;">
+                      @csrf
+                      @method('DELETE')
+                      <button type="submit" class="btn btn-sm btn-danger" onclick="return confirm('Yakin ingin menghapus?')">Hapus</button>
+                    </form>
+                  </td>
                 </tr>
-                <tr>
-                  <td>002</td>
-                  <td>Siti Aminah</td>
-                  <td>Samsul Huda</td>
-                  <td>Surabaya</td>
-                  <td>082112345678</td>
-                  <td>082198765432</td>
-                  <td>Perempuan</td>
-                  <td>2025-02-15</td>
-                  <td>1 Tahun</td>
-                </tr>
-                <tr>
-                  <td>003</td>
-                  <td>Rama Dwi</td>
-                  <td>Wahyudi</td>
-                  <td>Yogyakarta</td>
-                  <td>085611223344</td>
-                  <td>085699887766</td>
-                  <td>Laki-laki</td>
-                  <td>2025-03-20</td>
-                  <td>3 Bulan</td>
-                </tr>
+                @endforeach
               </tbody>
             </table>
           </div>

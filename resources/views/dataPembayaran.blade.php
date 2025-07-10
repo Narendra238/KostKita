@@ -30,6 +30,11 @@
 
     <!-- Template Stylesheet -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
+    <style>
+      .text-success { color: green; font-weight: bold; }
+      .text-danger { color: red; font-weight: bold; }
+    </style>
 </head>
 
 <body>
@@ -46,41 +51,28 @@
                 <div class="container-fluid bg-dark px-0">
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
-                    <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
+                    <a href="#" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                         <h1 class="m-0 text-primary">Kost KITA</h1>
                     </a>
                 </div>
                 <div class="col-lg-9">
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
-                        <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <a href="#" class="navbar-brand d-block d-lg-none">
                             <h1 class="m-0 text-primary">kost KITA</h1>
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
+                        </div>
+                        <div class="d-flex justify-content-end w-100 align-items-center">
+                          <a href="/dashboardadmin" class="fw-bold text-decoration-none" style="color: #FEA116; font-size: 2rem;">Dashboard Admin</a>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
         <!-- Header End -->
-
-
-        <!-- Page Header Start -->
-        <!-- <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/carousel-1.jpg);"> -->
-            <!-- <div class="container-fluid page-header-inner py-5"> -->
-                <!-- <div class="container text-center pb-5">
-                    <h1 class="display-3 text-white mb-3 animated slideInDown">Woman Rooms</h1>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center text-uppercase">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                            <li class="breadcrumb-item text-white active" aria-current="page"> Woman Rooms 2</li>
-                        </ol>
-                    </nav>
-                </div> -->
             </div>
         </div>
         <!-- Page Header End -->
@@ -93,85 +85,49 @@
       <div class="card mt-3">
         <div class="card-body">
           <h5 class="text-center fw-bold mb-4">TABEL DATA PEMBAYARAN</h5>
-
-          <!-- Pencarian dan Jumlah Tampilkan -->
-          <div class="d-flex justify-content-between mb-2">
-            <div>
-              <label>Menampilkan
-                <select class="form-select d-inline w-auto">
-                  <option>10</option>
-                  <option>25</option>
-                  <option>50</option>
-                </select>
-                entri
-              </label>
-            </div>
-            <div>
-              <input type="search" class="form-control" placeholder="Pencarian...">
-            </div>
-          </div>
-
           <div class="table-responsive">
-            <table class="table table-bordered align-middle text-center">
-              <thead class="table-light">
-                <tr>
-                  <th>No</th>
-                  <th>Kode Kamar</th>
-                  <th>Nomor Kamar</th>
-                  <th>Konsumen/Penghuni Aktif</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>K0001</td>
-                  <td>Kamar No.1</td>
-                  <td>Pajo</td>
-                  <td><span class="btn-status sudah">Sudah Bayar</span></td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>K0002</td>
-                  <td>Kamar No.2</td>
-                  <td>Sigit Dwi Prasetya</td>
-                  <td><span class="btn-status sudah">Sudah Bayar</span></td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>K0003</td>
-                  <td>Kamar No.3</td>
-                  <td>Yuvi Priyana</td>
-                  <td><span class="btn-status sudah">Sudah Bayar</span></td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>K0004</td>
-                  <td>Kamar No.4</td>
-                  <td>Dwi Setyo</td>
-                  <td><span class="btn-status belum">Belum Bayar</span></td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>K0005</td>
-                  <td>Kamar No.5</td>
-                  <td>Rizal Feizal</td>
-                  <td><span class="btn-status belum">Belum Bayar</span></td>
-                </tr>
-              </tbody>
+            <table class="table table-bordered align-middle text-center table-sm small">
+                <thead class="table-light">
+                  <tr>
+                    <th>No</th>
+                    <th>Kode Kamar</th>
+                    <th>Nomor Kamar</th>
+                    <th>Penghuni Aktif</th>
+                    <th>Status Bayar</th>
+                    <th>Tanggal Bayar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach($kamars as $index => $kamar)
+                  <tr>
+                    <td>{{ $index + 1 }}</td>
+                    <td>{{ $kamar->id_kmr }}</td>
+                    <td>{{ $kamar->nama_kamar ?? 'Kamar' }}</td>
+                    <td>{{ $kamar->penghuniAktif->namalengkap ?? '-' }}</td>
+                    <td>
+                      @if($kamar->penghuniAktif)
+                        <input type="checkbox" class="status-bayar" data-id="{{ $kamar->penghuniAktif->id }}"
+                          {{ $kamar->penghuniAktif->status_bayar ? 'checked' : '' }}>
+                      @else
+                        <span class="text-muted">-</span>
+                      @endif
+                    </td>
+                    <td>
+                      @if($kamar->penghuniAktif?->tanggal_bayar)
+                        {{ \Carbon\Carbon::parse($kamar->penghuniAktif->tanggal_bayar)->timezone('Asia/Jakarta')->format('d-m-Y H:i') }}
+                      @else
+                        <span class="text-muted">-</span>
+                      @endif
+                    </td>
+
+                  </tr>
+                  @endforeach
+                </tbody>
             </table>
+
           </div>
 
           <!-- Pagination Dummy -->
-          <nav>
-            <ul class="pagination justify-content-end mt-3">
-              <li class="page-item disabled"><a class="page-link">Awal</a></li>
-              <li class="page-item disabled"><a class="page-link">Sebelumnya</a></li>
-              <li class="page-item active"><a class="page-link">1</a></li>
-              <li class="page-item"><a class="page-link">Selanjutnya</a></li>
-              <li class="page-item"><a class="page-link">Akhir</a></li>
-            </ul>
-          </nav>
         </div>
       </div>
     </div>
@@ -191,6 +147,33 @@
     <script src="{{asset('assets/lib/tempusdominus/js/moment.min.js')}}"></script>
     <script src="{{asset('assets/lib/tempusdominus/js/moment-timezone.min.js')}}"></script>
     <script src="{{asset('assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+    <!-- Custom JavaScript for status bayar -->
+    <script>
+      document.querySelectorAll('.status-bayar').forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+          const id = this.dataset.id;
+          const status = this.checked;
+
+          fetch('{{ route('updateStatusBayar') }}', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            body: JSON.stringify({
+              id: id,
+              status_bayar: status
+            })
+          })
+          .then(response => response.json())
+          .then(data => {
+            alert('Status pembayaran berhasil diupdate!');
+            location.reload(); // kalau mau reload tabel
+          })
+          .catch(error => console.error('Gagal:', error));
+        });
+      });
+    </script>
 
     <!-- Template Javascript -->
    <script src="{{asset('assets/js/main.js')}}"></script>

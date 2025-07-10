@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileUsersKostController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\KamarController;
 
 Route::get('/', function () {
     return view('dashboard');
@@ -84,29 +85,29 @@ Route::get('/tambahpenghuni', function () {
     return view('tambahpenghuni');
 });
 
-Route::get('/dataPenghuni', function () {
-    return view('dataPenghuni');
-});
+Route::get('/dataPenghuni', [ProfileUsersKostController::class, 'index']);
 
-Route::get('/dataPembayaran', function () {
-    return view('dataPembayaran');
-});
+// Route::get('/dataPembayaran', function () {
+//     return view('dataPembayaran');
+// });
+
+Route::get('/dataPembayaran', [KamarController::class, 'dataPembayaran']);
+Route::post('/update-status-bayar', [ProfileUsersKostController::class, 'updateStatusBayar'])->name('updateStatusBayar');
 
 Route::get('/editPenghuni', function () {
     return view('editPenghuni');
 });
 
-// Route::get('/profileanak', function () {
-//     return view('profileanak');
-// });
 
-Route::get('/datakamaranak', function () {
-    return view('datakamaranak');
-});
+Route::get('/tambahpenghuni', [ProfileUsersKostController::class, 'create']);
+Route::post('/tambahpenghuni', [ProfileUsersKostController::class, 'store']);
+Route::get('/datakamaranak', [KamarController::class, 'dataKamarAnak']);
 
-Route::get('/dashboardadmin', function () {
-    return view('dashboardadmin');
-});
+Route::get('/dashboardadmin', [KamarController::class, 'dashboardAdminSummary']);
+
+Route::get('/editPenghuni/{id}', [ProfileUsersKostController::class, 'edit']);
+Route::post('/updatePenghuni/{id}', [ProfileUsersKostController::class, 'update']);
+Route::delete('/hapusPenghuni/{id}', [ProfileUsersKostController::class, 'destroy']);
 
 
 Route::get('/profilanak', [ProfileUsersKostController::class, 'index']);
