@@ -116,7 +116,12 @@
 
     <div class="mb-3">
       <label class="form-label">Nomor Kamar</label>
-      <input type="text" class="form-control" name="id_kmr" placeholder="Contoh: R002" required>
+      <select class="form-control" name="id_kmr" required>
+        <option value="" disabled selected>Pilih Kamar Kosong</option>
+        @foreach($kamarKosong as $kamar)
+          <option value="{{ $kamar->id_kmr }}">{{ $kamar->id_kmr }} - {{ $kamar->jenis_kamar }}</option>
+        @endforeach
+      </select>
     </div>
 
     <div class="mb-3">

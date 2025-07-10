@@ -102,7 +102,7 @@
                                 </div>
                                 <div class="form-group mb-3">
                                     <select name="role" class="form-control" required>
-                                        <option value="anak">Anak Kost</option>
+                                        <option value="user">Anak Kost</option>
                                         <option value="admin">Admin</option>
                                     </select>
                                 </div>

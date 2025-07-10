@@ -59,11 +59,16 @@
     <div class="container-xxl bg-white p-0">
         <!-- Header Start -->
         <div class="container-fluid bg-dark px-0">
-            <div class="row gx-0">
+            <div class="row gx-0 align-items-center">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
                     <a href="/" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
                         <h1 class="m-0 text-primary">Kost KITA</h1>
                     </a>
+                </div>
+                <div class="col-lg-9 d-flex justify-content-end align-items-center pe-4" style="height: 100px;">
+                    <a href="{{ url('/buatakun') }}" class="btn btn-primary me-2" style="margin-top: 10px;">Buat Akun</a>
+                    <a href="{{ url('/lihatakun') }}" class="btn btn-info me-2" style="margin-top: 10px; color: white;">Lihat Akun</a>
+                    <a href="{{ url('/logout') }}" class="btn btn-danger" style="margin-top: 10px;">Logout</a>
                 </div>
             </div>
         </div>

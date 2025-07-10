@@ -73,58 +73,64 @@
         <!-- Form Edit -->
 <div class="container mt-4">
   <h4 class="fw-bold mb-3">Edit Data Penghuni</h4>
-  <form action="{{ url('/tambahpenghuni') }}" method="POST">
+    <form action="{{ url('/updatePenghuni/' . $anak->id) }}" method="POST">
     @csrf
     <div class="mb-3">
       <label class="form-label">NIK</label>
-      <input type="text" class="form-control" name="id" placeholder="Masukkan NIK" required>
+      <input type="text" class="form-control" name="id" value="{{ $anak->id }}" readonly>
     </div>
     <div class="mb-3">
       <label class="form-label">Nama Lengkap</label>
-      <input type="text" class="form-control" name="namalengkap" placeholder="Masukkan nama lengkap" required>
+      <input type="text" class="form-control" name="namalengkap" value="{{ $anak->namalengkap }}" required>
     </div>
 
-    <div class="row mb-3">
+    <div class="mb-3">
       <div class="col-md-6">
         <label class="form-label">Jenis Kelamin</label>
-        <input type="text" class="form-control" name="jenis_kelamin" placeholder="L/P" required>
+        <input type="text" class="form-control" name="jenis_kelamin" value="{{ $anak->jenis_kelamin }}" required>
       </div>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Nomor Telpon</label>
-      <input type="text" class="form-control" name="no_tlp" placeholder="Masukkan Nomor Telpon" required>
+      <input type="text" class="form-control" name="no_tlp" value="{{ $anak->no_tlp }}" required>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Asal Daerah</label>
-      <input type="text" class="form-control" name="asal" placeholder="Asal Daerah" required>
+      <input type="text" class="form-control" name="asal" value="{{ $anak->asal }}" required>
     </div>
 
     <div class="row mb-3">
       <div class="col-md-6">
         <label class="form-label">Nama Ortu</label>
-        <input type="text" class="form-control" name="namaortu" placeholder="Nama Ortu" required>
+        <input type="text" class="form-control" name="namaortu" value="{{ $anak->namaortu }}" required>
       </div>
       <div class="col-md-6">
         <label class="form-label">No. HP Ortu</label>
-        <input type="text" class="form-control" name="no_ortu" placeholder="08xxxxxx" required>
+        <input type="text" class="form-control" name="no_ortu" value="{{ $anak->no_ortu }}" required>
       </div>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Nomor Kamar</label>
-      <input type="text" class="form-control" name="id_kmr" placeholder="Contoh: R002" required>
+      <select class="form-control" name="id_kmr" required>
+        @foreach($kamarKosong as $kamar)
+          <option value="{{ $kamar->id_kmr }}" @if($anak->id_kmr == $kamar->id_kmr) selected @endif>
+            {{ $kamar->id_kmr }} - {{ $kamar->jenis_kamar }}
+          </option>
+        @endforeach
+      </select>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Tanggal Masuk</label>
-      <input type="date" class="form-control" name="tgl_masuk" required>
+      <input type="date" class="form-control" name="tgl_masuk" value="{{ $anak->tgl_masuk }}" required>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Durasi Kost (hari)</label>
-      <input type="number" class="form-control" name="durasi_kost" placeholder="Contoh: 180" required>
+      <input type="number" class="form-control" name="durasi_kost" value="{{ $anak->durasi_kost }}" required>
     </div>
 
     <button type="submit" class="btn btn-warning">Update</button>

@@ -36,8 +36,8 @@
               <thead>
                 <tr>
                   <th scope="col">ID Kamar</th>
-                  <th scope="col">Nama Kamar</th>
                   <th scope="col">Jenis Kamar</th>
+                  <th scope="col">Dimensi</th>
                   <th scope="col">Harga</th>
                   <th scope="col">Status</th>
                 </tr>
