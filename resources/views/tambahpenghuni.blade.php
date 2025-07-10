@@ -52,12 +52,15 @@
                 </div>
                 <div class="col-lg-9">
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
-                        <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <a href="#" class="navbar-brand d-block d-lg-none">
                             <h1 class="m-0 text-primary">kost KITA</h1>
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
                         </button>
+                        <div class="d-flex justify-content-end w-100 align-items-center">
+                          <a href="/dashboardadmin" class="fw-bold text-decoration-none" style="color: #FEA116; font-size: 2rem;">Dashboard Admin</a>
+                        </div>
                         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
                         </div>
@@ -72,56 +75,58 @@
         <!-- Form Tambah -->
 <div class="container mt-4">
   <h4 class="fw-bold mb-3">Tambah Data Penghuni</h4>
-  <form>
+  <form action="{{ url('/tambahpenghuni') }}" method="POST">
+    @csrf
     <div class="mb-3">
       <label class="form-label">NIK</label>
-      <input type="text" class="form-control" placeholder="Masukkan NIK">
+      <input type="text" class="form-control" name="id" placeholder="Masukkan NIK" required>
     </div>
     <div class="mb-3">
       <label class="form-label">Nama Lengkap</label>
-      <input type="text" class="form-control" placeholder="Masukkan nama lengkap">
+      <input type="text" class="form-control" name="namalengkap" placeholder="Masukkan nama lengkap" required>
     </div>
 
     <div class="row mb-3">
       <div class="col-md-6">
         <label class="form-label">Jenis Kelamin</label>
-        <input type="text" class="form-control" placeholder="Laki-laki / Perempuan">
-      </div>
-      <div class="col-md-6">
-        <label class="form-label">Tanggal Lahir</label>
-        <input type="date" class="form-control">
+        <input type="text" class="form-control" name="jenis_kelamin" placeholder="L/P" required>
       </div>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Nomor Telpon</label>
-      <input type="text" class="form-control" placeholder="Masukkan Nomor Telpon">
+      <input type="text" class="form-control" name="no_tlp" placeholder="Masukkan Nomor Telpon" required>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Asal Daerah</label>
-      <input type="text" class="form-control" placeholder="Asal Daerah">
+      <input type="text" class="form-control" name="asal" placeholder="Asal Daerah" required>
     </div>
 
     <div class="row mb-3">
       <div class="col-md-6">
         <label class="form-label">Nama Ortu</label>
-        <input type="email" class="form-control" placeholder="Nama Ortu">
+        <input type="text" class="form-control" name="namaortu" placeholder="Nama Ortu" required>
       </div>
       <div class="col-md-6">
         <label class="form-label">No. HP Ortu</label>
-        <input type="tel" class="form-control" placeholder="08xxxxxx">
+        <input type="text" class="form-control" name="no_ortu" placeholder="08xxxxxx" required>
       </div>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Nomor Kamar</label>
-      <input type="text" class="form-control" placeholder="Contoh: R002">
+      <input type="text" class="form-control" name="id_kmr" placeholder="Contoh: R002" required>
     </div>
 
     <div class="mb-3">
       <label class="form-label">Tanggal Masuk</label>
-      <input type="text" class="form-control" placeholder="Tanggal Masuk">
+      <input type="date" class="form-control" name="tgl_masuk" required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Durasi Kost (hari)</label>
+      <input type="number" class="form-control" name="durasi_kost" placeholder="Contoh: 180" required>
     </div>
 
     <button type="submit" class="btn btn-warning">Tambah</button>

@@ -8,15 +8,15 @@ use App\Http\Controllers\ProfileUsersKostController;
 
 class ProfileUsersKost extends Model
 {
-    /** @use HasFactory<\Database\Factories\ProfileUsersKostFactory> */
     use HasFactory;
-     protected $table = 'AnakKost'; // Nama tabel (default: snake_case dari model)
-
-    protected $primaryKey = 'id'; // Jika primary key-nya bukan 'id'
-
-    public $incrementing = false; // Jika primary key bukan auto-increment
-
-    protected $keyType = 'string'; // Tipe primary key jika bukan integer
+    protected $table = 'AnakKost';
+    protected $primaryKey = 'id';
+    public $incrementing = false;
+    protected $keyType = 'string';
+    public $timestamps = false;
+    protected $casts = [
+    'status_bayar' => 'boolean',
+    ];
 
     protected $fillable = [
         'id',
@@ -30,4 +30,9 @@ class ProfileUsersKost extends Model
         'durasi_kost',
         'id_kmr',
     ];
+
+    public function kamar()
+    {
+        return $this->belongsTo(Kamar::class, 'id_kmr', 'id_kmr');
+    }
 }
