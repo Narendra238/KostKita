@@ -23,7 +23,9 @@ class ProfileUsersKostController extends Controller
      */
     public function create()
     {
-        return view('tambahpenghuni');
+        // Ambil semua kamar yang kosong (belum ada penghuni)
+        $kamarKosong = \App\Models\Kamar::whereDoesntHave('profileUsersKost')->get();
+        return view('tambahpenghuni', compact('kamarKosong'));
     }
 
     public function store(Request $request)
@@ -42,7 +44,7 @@ class ProfileUsersKostController extends Controller
             'durasi_kost' => 'required',
         ]);
 
-        ProfileUsersKost::create([
+        $anak = ProfileUsersKost::create([
             'id' => $request->id,
             'namalengkap' => $request->namalengkap,
             'jenis_kelamin' => $request->jenis_kelamin,
@@ -55,7 +57,14 @@ class ProfileUsersKostController extends Controller
             'durasi_kost' => $request->durasi_kost,
         ]);
 
-        return redirect('/dataPenghuni')->with('success', 'Data penghuni berhasil ditambahkan!');
+        // Otomatis buat user login untuk penghuni baru
+        \App\Models\User::create([
+            'username' => $request->id, // username pakai id anak kost
+            'password' => \Hash::make($request->id), // password default = id, di-hash
+            'role' => 'user',
+        ]);
+
+        return redirect('/dataPenghuni')->with('success', 'Data penghuni & user login berhasil ditambahkan!');
     }
 
     /**
@@ -78,10 +87,30 @@ class ProfileUsersKostController extends Controller
      * Show the form for editing the specified resource.
      */
     //
-   public function index()
+    public function index(Request $request)
     {
-        $penghuni = ProfileUsersKost::all();
-        return view('dataPenghuni', compact('penghuni'));
+        $sort = $request->get('sort', 'tgl_masuk');
+        $dir = $request->get('dir', 'asc');
+        $search = $request->get('search');
+
+        $query = \App\Models\ProfileUsersKost::query();
+
+        if ($search) {
+            $query->where(function($q) use ($search) {
+                $q->where('id', 'ilike', "%$search%")
+                  ->orWhere('namalengkap', 'ilike', "%$search%")
+                  ->orWhere('namaortu', 'ilike', "%$search%")
+                  ->orWhere('asal', 'ilike', "%$search%")
+                  ->orWhere('no_tlp', 'ilike', "%$search%")
+                  ->orWhere('no_ortu', 'ilike', "%$search%")
+                  ->orWhere('jenis_kelamin', 'ilike', "%$search%")
+                  ->orWhere('id_kmr', 'ilike', "%$search%");
+            });
+        }
+
+        $penghuni = $query->orderBy($sort, $dir)->get();
+
+        return view('dataPenghuni', compact('penghuni', 'sort', 'dir', 'search'));
     }
 
     public function show($nik)
@@ -95,8 +124,12 @@ class ProfileUsersKostController extends Controller
 
     public function edit($id)
     {
-        $penghuni = ProfileUsersKost::where('id', $id)->firstOrFail();
-        return view('editPenghuni', compact('penghuni'));
+        $anak = ProfileUsersKost::findOrFail($id);
+        // Ambil semua kamar kosong atau kamar yang sedang ditempati penghuni ini
+        $kamarKosong = \App\Models\Kamar::whereDoesntHave('profileUsersKost')
+            ->orWhere('id_kmr', $anak->id_kmr)
+            ->get();
+        return view('editPenghuni', compact('anak', 'kamarKosong'));
     }
 
     public function update(Request $request, $id)

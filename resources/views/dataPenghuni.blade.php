@@ -80,6 +80,12 @@
         <div>
           <a href="/tambahpenghuni" class="btn btn-custom me-2"><strong>Tambah</strong></a>
         </div>
+        <div class="ms-2" style="min-width:250px;">
+          <form method="GET" action="{{ url()->current() }}" class="d-flex justify-content-end">
+            <input type="text" name="search" class="form-control me-2" placeholder="Cari penghuni..." value="{{ request('search') }}">
+            <button type="submit" class="btn btn-primary btn-sm">Cari</button>
+          </form>
+        </div>
       </div>
 
       <!-- Tabel -->
@@ -91,13 +97,28 @@
               <thead class="table-light">
                 <tr>
                   <th>ID</th>
-                  <th>Nama Lengkap</th>
+                  <th>Nama Lengkap
+                    <div style="font-size:11px;">
+                      <a href="{{ url()->current() }}?sort=namalengkap&dir=asc">ASC</a> |
+                      <a href="{{ url()->current() }}?sort=namalengkap&dir=desc">DSC</a>
+                    </div>
+                  </th>
                   <th>Nama Orang Tua</th>
-                  <th>Asal</th>
+                  <th>Asal
+                    <div style="font-size:11px;">
+                      <a href="{{ url()->current() }}?sort=asal&dir=asc">ASC</a> |
+                      <a href="{{ url()->current() }}?sort=asal&dir=desc">DSC</a>
+                    </div>
+                  </th>
                   <th>No.Telepon</th>
                   <th>No.Ortu</th>
                   <th>JK</th>
-                  <th>Tanggal Masuk</th>
+                  <th>Tanggal Masuk
+                    <div style="font-size:11px;">
+                      <a href="{{ url()->current() }}?sort=tgl_masuk&dir=asc">ASC</a> |
+                      <a href="{{ url()->current() }}?sort=tgl_masuk&dir=desc">DSC</a>
+                    </div>
+                  </th>
                   <th>Durasi</th>
                   <th>Tanggal Selesai</th>
                   <th>ID Kamar</th>

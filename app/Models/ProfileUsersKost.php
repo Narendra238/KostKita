@@ -35,4 +35,6 @@ class ProfileUsersKost extends Model
     {
         return $this->belongsTo(Kamar::class, 'id_kmr', 'id_kmr');
     }
+    
+
 }

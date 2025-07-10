@@ -106,6 +106,7 @@ Route::get('/datakamaranak', [KamarController::class, 'dataKamarAnak']);
 Route::get('/dashboardadmin', [KamarController::class, 'dashboardAdminSummary']);
 
 Route::get('/editPenghuni/{id}', [ProfileUsersKostController::class, 'edit']);
+Route::post('/editPenghuni/{id}', [ProfileUsersKostController::class, 'update']);
 Route::post('/updatePenghuni/{id}', [ProfileUsersKostController::class, 'update']);
 Route::delete('/hapusPenghuni/{id}', [ProfileUsersKostController::class, 'destroy']);
 
@@ -114,3 +115,14 @@ Route::get('/profilanak', [ProfileUsersKostController::class, 'index']);
 Route::get('/profilanak/{id}', [ProfileUsersKostController::class, 'show']);
 
 Route::post('/login-gabungan', [LoginController::class, 'loginGabungan']);
+Route::get('/logout', [LoginController::class, 'logout']);
+
+// Buat akun user/admin
+Route::get('/buatakun', [LoginController::class, 'showBuatAkun']);
+Route::post('/buatakun', [LoginController::class, 'storeBuatAkun']);
+
+// Lihat akun user/admin (username & role saja)
+Route::get('/lihatakun', [LoginController::class, 'lihatAkun']);
+
+// Hapus user akun berdasarkan ID
+Route::delete('/hapusUser/{id}', [LoginController::class, 'hapusUser']);
