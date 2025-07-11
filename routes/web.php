@@ -126,3 +126,14 @@ Route::get('/lihatakun', [LoginController::class, 'lihatAkun']);
 
 // Hapus user akun berdasarkan ID
 Route::delete('/hapusUser/{id}', [LoginController::class, 'hapusUser']);
+
+// Kamar terisi dashboard
+Route::get('/', [KamarController::class, 'dashboardSummary']);
+//kamar terisi about
+Route::get('/about', [KamarController::class, 'aboutSummary']);
+
+// Hitung kamar terisi berdasarkan detail kamar
+Route::get('/detailcowo1', [KamarController::class, 'detailCowo1']);
+Route::get('/detailcowo2', [KamarController::class, 'detailCowo2']);
+Route::get('/detailcewe1', [KamarController::class, 'detailCewe1']);
+Route::get('/detailcewe2', [KamarController::class, 'detailCewe2']);

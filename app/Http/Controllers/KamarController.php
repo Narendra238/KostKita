@@ -25,6 +25,14 @@ class KamarController extends Controller
         $cowoKosong = Kamar::countKamarCowoKosong();
         return view('dashboardadmin', compact('ceweKosong', 'cowoKosong'));
     }
+    public function dashboardSummary()
+    {
+        $totalKamar = \App\Models\Kamar::count();
+        $kamarTerisi = \App\Models\Kamar::whereHas('profileUsersKost')->count();
+        // Jika relasi belum ada, bisa pakai: where('status', 'terisi')->count();
+
+        return view('dashboard', compact('totalKamar', 'kamarTerisi'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -101,5 +109,64 @@ class KamarController extends Controller
     {
         $kamars = \App\Models\Kamar::with('penghuniAktif')->get(); // Pastikan relasi sudah dibuat
         return view('dataPembayaran', compact('kamars'));
+    }
+    public function aboutSummary()
+    {
+        $totalKamar = \App\Models\Kamar::count();
+        $kamarTerisi = \App\Models\Kamar::whereHas('profileUsersKost')->count();
+        return view('about', compact('totalKamar', 'kamarTerisi'));
+    }
+
+    // Jumlah ready kamar cowo dan cewe
+    public function detailCowo1()
+    {
+        $total = \App\Models\Kamar::whereIn('id_kmr', ['R009', 'R010', 'R011'])
+            ->where('dimensi', 'M')
+            ->count();
+        $terisi = \App\Models\Kamar::whereIn('id_kmr', ['R009', 'R010', 'R011'])
+            ->where('dimensi', 'M')
+            ->has('profileUsersKost')
+            ->count();
+        $ready = $total - $terisi;
+        return view('detailcowo1', compact('total', 'terisi', 'ready'));
+    }
+
+    public function detailCowo2()
+    {
+        $total = \App\Models\Kamar::whereIn('id_kmr', ['R012', 'R013', 'R013','R014', 'R015', 'R016','R017', 'R018', 'R019','R020', 'R021', 'R022'])
+            ->where('dimensi', 'M')
+            ->count();
+        $terisi = \App\Models\Kamar::whereIn('id_kmr', ['R012', 'R013', 'R013','R014', 'R015', 'R016','R017', 'R018', 'R019','R020', 'R021', 'R022'])
+            ->where('dimensi', 'M')
+            ->has('profileUsersKost')
+            ->count();
+        $ready = $total - $terisi;
+        return view('detailcowo2', compact('total', 'terisi', 'ready'));
+    }
+
+    public function detailCewe1()
+    {
+        $total = \App\Models\Kamar::whereIn('id_kmr', ['R005', 'R006', 'R007','R008'])
+            ->where('dimensi', 'L')
+            ->count();
+        $terisi = \App\Models\Kamar::whereIn('id_kmr', ['R005', 'R006', 'R007','R008'])
+            ->where('dimensi', 'L')
+            ->has('profileUsersKost')
+            ->count();
+        $ready = $total - $terisi;
+        return view('detailcewe1', compact('total', 'terisi', 'ready'));
+    }
+
+    public function detailCewe2()
+    {
+        $total = \App\Models\Kamar::whereIn('id_kmr', ['R001', 'R002', 'R003','R004'])
+            ->where('dimensi', 'M')
+            ->count();
+        $terisi = \App\Models\Kamar::whereIn('id_kmr', ['R001', 'R002', 'R003','R004'])
+            ->where('dimensi', 'M')
+            ->has('profileUsersKost')
+            ->count();
+        $ready = $total - $terisi;
+        return view('detailcewe2', compact('total', 'terisi', 'ready'));
     }
 }
