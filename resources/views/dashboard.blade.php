@@ -133,7 +133,7 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-hotel fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">22</h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">{{ $totalKamar ?? 0 }}</h2>
                                         <p class="mb-0">Rooms</p>
                                     </div>
                                 </div>
@@ -151,7 +151,7 @@
                                 <div class="border rounded p-1">
                                     <div class="border rounded text-center p-4">
                                         <i class="fa fa-users fa-2x text-primary mb-2"></i>
-                                        <h2 class="mb-1" data-toggle="counter-up">21</h2>
+                                        <h2 class="mb-1" data-toggle="counter-up">{{ $kamarTerisi ?? 0 }}</h2>
                                         <p class="mb-0">Clients</p>
                                     </div>
                                 </div>
