@@ -121,20 +121,23 @@
                           <h2 class="font-weight-bold mb-2">Lokasi Strategis, Akses Mudah!</h2>
                           <h4 class="font-weight-bold mb-2">Tinggal di Sini, Ke Mana-Mana Dekat!</h4><br>
                           <p>Fasilitas Umum:</p>
-                            Balaikota Yogyakarta 8 Menit<br>
-                            Stadion Mandala Krida 6 Menit
+                            8 menit menuju Balaikota Yogyakarta<br>
+                            6 menit menuju Stadion Mandala Krida<br>
+                            6 menit menuju Plaza Ambarukmo Yogyakarta<br>
+                            2 menit menuju Lippo Plaza Yogyakarta<br>
+                            15 menit menuju Pakuwon Mall Yogyakarta
                           <br>
                           <p>
                             <p>Kampus:</p>
-                            UIN Sunan Kalijaga = 3 Menit<br>
-                            UNY = 8 Menit<br>
-                            UGM = 12 Menit<br>
-                            UPN Veteran Pusat = 16 Menit<br>
-                            UPN Veteran Babarsari = 11 Menit<br>
-                            UAD Kampus 1 = 6 Menit<br>
-                            UAD Kampus 2 = 16 Menit<br>
-                            UAD Kampus 3 = 14 Menit<br>
-                            UAD Kampus 4 = 18 Menit<br>
+                            3  menit menuju UIN Sunan Kalijaga<br>
+                            8  menit menuju UNY<br>
+                            6  menit menuju UAD 1<br>
+                            16 menit menuju UAD 2<br>
+                            14 menit menuju UAD 3<br>
+                            18 menit menuju UAD 4<br>
+                            12 menit menuju UGM<br>
+                            16 menit menuju UPN Veteran Pusat<br>
+                            11 menit menuju UPN Veteran Babarsari<br>
                           </p>
 
                         </div>
