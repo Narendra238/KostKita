@@ -118,8 +118,25 @@
 
                         <!-- Kolom Teks -->
                         <div class="col-md-4 bg-white pt-3">
-                          <h2 class="font-weight-bold mb-2">Ayo Mulai!</h2>
-                          <p>Arahin alamatnya kemana mana</p>
+                          <h2 class="font-weight-bold mb-2">Lokasi Strategis, Akses Mudah!</h2>
+                          <h4 class="font-weight-bold mb-2">Tinggal di Sini, Ke Mana-Mana Dekat!</h4><br>
+                          <p>Fasilitas Umum:</p>
+                            Balaikota Yogyakarta 8 Menit<br>
+                            Stadion Mandala Krida 6 Menit
+                          <br>
+                          <p>
+                            <p>Kampus:</p>
+                            UIN Sunan Kalijaga = 3 Menit<br>
+                            UNY = 8 Menit<br>
+                            UGM = 12 Menit<br>
+                            UPN Veteran Pusat = 16 Menit<br>
+                            UPN Veteran Babarsari = 11 Menit<br>
+                            UAD Kampus 1 = 6 Menit<br>
+                            UAD Kampus 2 = 16 Menit<br>
+                            UAD Kampus 3 = 14 Menit<br>
+                            UAD Kampus 4 = 18 Menit<br>
+                          </p>
+
                         </div>
                       </div>
                     </div>

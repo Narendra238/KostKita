@@ -112,7 +112,7 @@
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Kamar Size Medium(KML)</h5>
+                                    <h6 class="mb-0">Kamar Size Medium(KML)</h6>
                                     <div class="ps-1" style="min-width: 110px;">
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
@@ -142,7 +142,7 @@
                             </div>
                             <div class="p-4 mt-2">
                                 <div class="d-flex justify-content-between mb-3">
-                                    <h5 class="mb-0">Kamar Size Medium(KMD)</h5>
+                                    <h6 class="mb-0">Kamar Size Medium(KMD)</h6>
                                     <div class="ps-1" style="min-width: 110px;">
                                         <small class="fa fa-star text-primary"></small>
                                         <small class="fa fa-star text-primary"></small>
@@ -166,7 +166,7 @@
                     </div>
                 </div>
             </div>
-        </div><br><br><br>
+        </div><br><br><br><br>
         <!-- Room End --> 
 
         <!-- Footer Start -->
