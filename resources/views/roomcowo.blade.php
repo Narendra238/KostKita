@@ -107,7 +107,7 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{asset('assets/img/room-1.jpg')}}" alt="">
+                                <img class="img-fluid" src="{{asset('assets/img/CowoKamarMandiLuar.jpg')}}" alt="">
                                 <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">Rp. 450.000/Bulan</small>
                             </div>
                             <div class="p-4 mt-2">
@@ -137,7 +137,7 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{asset('assets/img/room-2.jpg')}}" alt="">
+                                <img class="img-fluid" src="{{asset('assets/img/CowoKamarMandiDalam.jpg')}}" alt="">
                                 <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">Rp. 650.000/Bulan</small>
                             </div>
                             <div class="p-4 mt-2">

@@ -104,7 +104,7 @@
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="room-item shadow rounded overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="{{asset('assets/img/room-1.jpg')}}" alt="">
+                                <img class="img-fluid" src="{{asset('assets/img/CowoKamarMandiLuar.jpg')}}" alt="">
                             </div>
                             <div class="p-4 mt-2">
                             </div>
