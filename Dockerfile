@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y \
     git \
     unzip \
     curl \
+    nodejs \
+    npm \
     libpq-dev \
     libzip-dev \
     zip \
@@ -22,13 +24,13 @@ WORKDIR /var/www
 # Salin semua file ke image
 COPY . .
 
-# Install dependensi Laravel
+# Install dependensi PHP Laravel
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
-# Generate key otomatis (opsional, jika kamu gak set APP_KEY via ENV)
-# RUN php artisan key:generate
+# Install dependency frontend
+RUN npm install && npm run build
 
-# Port Railway akan inject ke variabel $PORT, kita pasang default ke 8080
+# Port Railway akan inject ke variabel $PORT, default ke 8080
 ENV PORT=8080
 
 # Jalankan Laravel dev server
