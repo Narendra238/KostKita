@@ -91,7 +91,6 @@
                   <tr>
                     <th>No</th>
                     <th>Kode Kamar</th>
-                    <th>Nomor Kamar</th>
                     <th>Penghuni Aktif</th>
                     <th>Status Bayar</th>
                     <th>Tanggal Bayar</th>
@@ -102,7 +101,6 @@
                   <tr>
                     <td>{{ $index + 1 }}</td>
                     <td>{{ $kamar->id_kmr }}</td>
-                    <td>{{ $kamar->nama_kamar ?? 'Kamar' }}</td>
                     <td>{{ $kamar->penghuniAktif->namalengkap ?? '-' }}</td>
                     <td>
                       @if($kamar->penghuniAktif)
